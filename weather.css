@@ -1,14 +1,40 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:700,900,500);
+
 html body{
-  background: #63A68E;
+  background: #5BC6FA;
   color: #ffffff;
   height: 100%;
+  width: 100%;
   padding: 0;
   margin: 0;
+}
+
+.weather-search-box{
+  margin-top: 45%;
+  margin-left: 27%;
+  height: auto;
+  height: 30px;
+  width: 150px;
+}
+
+.add-button{
+  background-color: #EE232B;
+  margin-left: 20%;
+  margin-top: 7%;
+  border: 2px solid #EE232B;
+  border-radius: 18px;
+  height: 35px;
+  width: 200px;
+  font-size: 17px;
+  color: white;
+}
+
+.forecast-header{
+  
 }
 
 .forecast{
   font-family: 'Roboto', sans-serif;
   font-size: 12px;
-  display:inline;
+  display:inline-block;
 }

@@ -1,12 +1,11 @@
 angular.module('weatherApp').controller('weatherCtrl', function($scope, weatherService){
 
   $scope.test = "Working";
+  $scope.weatherData;
   $scope.getWeather = function(city){
-    console.log(city);
-    weatherService.getWeather(city).then(function(data){
-      $scope.weatherData = data.daily.data;
-    })
-  }
+    weatherService.getWeather(city);
+    }
+
   $scope.convertWeatherTime = function(time){
   return new Date(time * 1000);
 }
