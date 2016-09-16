@@ -1,0 +1,24 @@
+<nav>
+    <a ui-sref="log">Go to Weather Log</a>
+</nav>
+<div class="weather-containter">
+    <input class="weather-search-box" type="text" ng-model="searchTerm" placeholder="Enter City or Zipcode">
+    <button class="weather-log-add-button" ng-click="getWeather(searchTerm)">Get Weather</button>
+    <table>
+      <tr class="forecast forecast-date" ng-repeat="forecast in weatherData">
+        <td>{{convertWeatherTime(forecast.time) | date:'short'}}</td>
+      </tr>
+      <tr class="forecast forecast-summary" ng-repeat="forecast in weatherData">
+          <td>{{forecast.summary}}</td>
+      </tr>
+      <tr class="forecast forecast-icon" ng-repeat="forecast in weatherData">
+          <td>{{forecast.icon}}</td>
+      </tr>
+      <tr class="forecast forecast-max-temp" ng-repeat="forecast in weatherData">
+          <td>{{roundTemp(forecast.apparentTemperatureMax)}}</td>
+      </tr>
+      <tr class="forecast forecast-min-temp" ng-repeat="forecast in weatherData">
+          <td>{{roundTemp(forecast.apparentTemperatureMin)}}</td>
+      </tr>
+    </table>
+</div>
