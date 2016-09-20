@@ -1,9 +1,9 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:700,900,500);
 
 html body {
-    background-color: #87EBD6;
-    background: #87EBD6 -webkit-gradient(linear, left top, left bottom, from(#87BDEB), to(#87EBD6)) no-repeat;
-    color: #ffffff;
+    background-color: #ffd166;
+    background: #ffd166 -webkit-gradient(linear, left top, left bottom, from(#fcfcfc), to(#ffd166), no-repeat)
+    color: #ef476f;
     height: 100%;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
     Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -24,6 +24,7 @@ nav {
 .app-title{
   font-size: 10vw;
   text-align: center;
+  color: #26547c;
 }
 
 .weather-search-box {
@@ -35,11 +36,11 @@ nav {
 }
 
 .add-button {
-    background-color: #01A611;
-    margin: 0 auto;
-    border: 2px solid #01A611;
+    background-color: #ef476f;
+    border: 2px solid #ef476f;
     border-radius: 18px;
-    font-size: 5vw;
+    font-size: 3vw;
+    width: 35%;
     color: white;
     margin-left: 7px;
 
@@ -49,6 +50,7 @@ nav {
   text-align: center;
   font-size: 3em;
   margin: 0 auto;
+  color: #26547c;
 }
 
 .weather-card {
@@ -57,7 +59,7 @@ nav {
     border-radius: 20px;
     width: 90%;
     /*height: 270px;*/
-    background-color: white;
+    background-color: #fcfcfc;
     color: black;
     text-align: center;
 }
@@ -74,11 +76,13 @@ li {
     text-align: center;
     font-size: 3em;
     font-weight: 300;
+    color: #26547c;
 }
 
 .weather-date {
   font-size: 1.5em;
   font-weight: 100;
+  color: #26547c;
 }
 
 .temp-box {
@@ -87,14 +91,16 @@ li {
   align-items: center;
   font-size: 1.75em;
   width: 35%;
+  color: #26547c;
 }
-.fa-arrow-up{
-    color: #E2224C;
+.degree-symbol{
+  color: #ef476f;
+}
+.fa {
+    color: #06d6a0;
 }
 
-.fa-arrow-down{
-  color: #0276FD;
-}
+
 
 }
 @media all and (max-width: 1920px) and (min-width: 1280px){

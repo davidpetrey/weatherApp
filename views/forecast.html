@@ -3,22 +3,27 @@
 </nav>
 <div class="weather-containter">
   <nav>
-    <input class="weather-search-box" type="text" ng-model="searchTerm" placeholder="What city are you in?" /><br /><br />
-      <button class="add-button" ng-click="getWeather(searchTerm, key)">5-Day KempKast</button>
-    </nav>
-    <p class="forecast-city"> {{searchTerm}}</p>
-    <ul ng-repeat="forecast in weatherData.slice(0,5)">
+    <form>
+    <input class="weather-search-box" type="text" ng-model="city" placeholder="Enter city or zip" />
+    <br/><br/>
+    <input type="submit" class="add-button" ng-click="getWeather(city)" value="Get Forecast" />
+    </form>
+  </nav>
+
+    <p class="forecast-city">{{cityWeather.city.name}}</p>
+    <ul ng-repeat="(day, value) in weatherWeek">
         <div class = "weather-card">
-        <ul class="weather-dayWeek">{{convertWeatherTime(forecast.time) | date:'EEEE'}}</ul>
-        <skycon icon="forecast.icon" size="100"></skycon>
-        <ul class="weather-date">{{convertWeatherTime(forecast.time) | date:'shortDate'}}</ul>
-        <div class = "temp-box">
-        <ul class="temp-hi"> <i class="fa fa-arrow-up" aria-hidden="true"></i>{{roundTemp(forecast.apparentTemperatureMax)}}&deg;</ul>
-      </div>
-      <div class="temp-box">
-        <ul class="temp-lo">
-          <i class="fa fa-arrow-down" aria-hidden="true"></i> {{roundTemp(forecast.apparentTemperatureMin)}}&deg;</ul>
-      </div>
+          <ul>
+            <li class="weather-dayWeek">{{value.dt*1000 | date:'EEEE'}}</li>
+            <li class="weather-date">{{value.dt*1000 | date:'shortDate'}}</li>
+            <div class = "temp-box">
+              <li class="temp-hi"> <i class="fa fa-arrow-up" aria-hidden="true"></i> {{roundTemp(value.temp.max)}}<span class="degree-symbol">&deg;</span></li>
+            </div>
+            <div class="temp-box">
+              <li class="temp-lo">
+                <i class="fa fa-arrow-down" aria-hidden="true"></i> {{roundTemp(value.temp.min)}}<span class="degree-symbol">&deg;</span></li>
+            </div>
+          </ul>
       </div>
     </ul>
 </div>

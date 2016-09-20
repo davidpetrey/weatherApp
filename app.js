@@ -1,4 +1,4 @@
-angular.module('weatherApp', ['ui.router', 'ngAnimate', 'angular-loading-bar', 'angular-skycons']);
+angular.module('weatherApp', ['ui.router', 'ngAnimate', 'ngResource', 'angular-loading-bar', 'angular-skycons']);
 
 angular.module('weatherApp')
   .config(function($stateProvider, $urlRouterProvider) {
