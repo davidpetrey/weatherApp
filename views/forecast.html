@@ -1,29 +1,24 @@
 <nav>
-    <a ui-sref="log">Go to Weather Log</a>
+    <h1 class="app-title"> KempKast </h1>
 </nav>
 <div class="weather-containter">
-    <input class="weather-search-box" type="text" ng-model="searchTerm" placeholder="Enter City or Zipcode" /><br />
-    <button class="add-button" ng-click="getWeather(searchTerm)"> Weather Me</button>
-    <table>
-      <div class="forecast-header">
-      <th>Date</th>
-      <th>High</th>
-      <th>Low</th>
-    </div>
-      <tr class="forecast forecast-date" ng-repeat="forecast in weatherData.slice(0, 5)">
-        <td>{{convertWeatherTime(forecast.time) | date:'shortDate'}}</td>
-      </tr>
-      <!-- <tr class="forecast forecast-summary" ng-repeat="forecast in weatherData">
-          <td>{{forecast.summary}}</td>
-      </tr> -->
-      <!-- <tr class="forecast forecast-icon" ng-repeat="forecast in weatherData">
-          <td>{{forecast.icon}}</td>
-      </tr> -->
-      <tr class="forecast forecast-max-temp" ng-repeat="forecast in weatherData">
-          <td>{{roundTemp(forecast.apparentTemperatureMax)}}</td>
-      </tr>
-      <tr class="forecast forecast-min-temp" ng-repeat="forecast in weatherData">
-          <td>{{roundTemp(forecast.apparentTemperatureMin)}}</td>
-      </tr>
-    </table>
+  <nav>
+    <input class="weather-search-box" type="text" ng-model="searchTerm" placeholder="What city are you in?" /><br /><br />
+      <button class="add-button" ng-click="getWeather(searchTerm, key)">5-Day KempKast</button>
+    </nav>
+    <p class="forecast-city"> {{searchTerm}}</p>
+    <ul ng-repeat="forecast in weatherData.slice(0,5)">
+        <div class = "weather-card">
+        <ul class="weather-dayWeek">{{convertWeatherTime(forecast.time) | date:'EEEE'}}</ul>
+        <skycon icon="forecast.icon" size="100"></skycon>
+        <ul class="weather-date">{{convertWeatherTime(forecast.time) | date:'shortDate'}}</ul>
+        <div class = "temp-box">
+        <ul class="temp-hi"> <i class="fa fa-arrow-up" aria-hidden="true"></i>{{roundTemp(forecast.apparentTemperatureMax)}}&deg;</ul>
+      </div>
+      <div class="temp-box">
+        <ul class="temp-lo">
+          <i class="fa fa-arrow-down" aria-hidden="true"></i> {{roundTemp(forecast.apparentTemperatureMin)}}&deg;</ul>
+      </div>
+      </div>
+    </ul>
 </div>

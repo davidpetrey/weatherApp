@@ -1,4 +1,4 @@
-angular.module('weatherApp', ['ui.router', 'ngAnimate', 'angular-loading-bar']);
+angular.module('weatherApp', ['ui.router', 'ngAnimate', 'angular-loading-bar', 'angular-skycons']);
 
 angular.module('weatherApp')
   .config(function($stateProvider, $urlRouterProvider) {
@@ -8,12 +8,6 @@ angular.module('weatherApp')
     .state('forecast', {
       url: '/forecast',
       templateUrl: 'views/forecast.html',
-      controller: 'weatherCtrl'
-    })
-
-    .state('log', {
-      url: '/log',
-      templateUrl: 'views/weatherLog.html',
       controller: 'weatherCtrl'
     })
     $urlRouterProvider.otherwise('/forecast');

@@ -1,40 +1,108 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:700,900,500);
 
-html body{
-  background: #5BC6FA;
-  color: #ffffff;
-  height: 100%;
-  width: 100%;
+html body {
+    background-color: #87EBD6;
+    background: #87EBD6 -webkit-gradient(linear, left top, left bottom, from(#87BDEB), to(#87EBD6)) no-repeat;
+    color: #ffffff;
+    height: 100%;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+.weather-container{
+  height: 100vh;
+  width: 100vw;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
+  display: inline-block;
 }
 
-.weather-search-box{
-  margin-top: 45%;
-  margin-left: 27%;
-  height: auto;
-  height: 30px;
-  width: 150px;
+nav {
+  text-align: center;
+  padding: 20px 0;
 }
 
-.add-button{
-  background-color: #EE232B;
-  margin-left: 20%;
-  margin-top: 7%;
-  border: 2px solid #EE232B;
-  border-radius: 18px;
-  height: 35px;
-  width: 200px;
-  font-size: 17px;
-  color: white;
+.app-title{
+  font-size: 10vw;
+  text-align: center;
 }
 
-.forecast-header{
-  
+.weather-search-box {
+    border: 2px solid white;
+    border-radius: 18px;
+    font-size: 5vw;
+    text-align: center;
+    margin: 0 auto;
 }
 
-.forecast{
-  font-family: 'Roboto', sans-serif;
-  font-size: 12px;
+.add-button {
+    background-color: #01A611;
+    margin: 0 auto;
+    border: 2px solid #01A611;
+    border-radius: 18px;
+    font-size: 5vw;
+    color: white;
+    margin-left: 7px;
+
+}
+
+.forecast-city{
+  text-align: center;
+  font-size: 3em;
+  margin: 0 auto;
+}
+
+.weather-card {
+    position: relative;
+    margin: 0 auto;
+    border-radius: 20px;
+    width: 90%;
+    /*height: 270px;*/
+    background-color: white;
+    color: black;
+    text-align: center;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.weather-dayWeek {
+    text-align: center;
+    font-size: 3em;
+    font-weight: 300;
+}
+
+.weather-date {
+  font-size: 1.5em;
+  font-weight: 100;
+}
+
+.temp-box {
   display:inline-block;
+  margin: 18px;
+  align-items: center;
+  font-size: 1.75em;
+  width: 35%;
+}
+.fa-arrow-up{
+    color: #E2224C;
+}
+
+.fa-arrow-down{
+  color: #0276FD;
+}
+
+}
+@media all and (max-width: 1920px) and (min-width: 1280px){
+  .weather-card{
+    width: 60%;
+  }
+  .temp-box {
+    margin: 20px;
+    font-size: 3.75em;
+  }
 }
