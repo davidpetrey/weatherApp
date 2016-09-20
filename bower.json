@@ -1,0 +1,23 @@
+{
+  "name": "weatherapp",
+  "description": "A Weather app using Open Weather Map's API",
+  "main": "app.js",
+  "authors": [
+    "Andrew Kemp <andrewtkemp@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/andrewtkemp1/weatherApp",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ui-router": "^0.3.1",
+    "angular-loading-bar": "^0.9.0",
+    "angular": "^1.5.8",
+    "angular-skycons": "^2.0.2"
+  }
+}
