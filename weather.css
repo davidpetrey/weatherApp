@@ -1,9 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:700,900,500);
 
 html body {
-    background-color: #ffd166;
-    background: #ffd166 -webkit-gradient(linear, left top, left bottom, from(#fcfcfc), to(#ffd166), no-repeat)
-    color: #ef476f;
+    background-color: black;
+    color: #fcfcfc;
     height: 100%;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
     Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -24,7 +23,7 @@ nav {
 .app-title{
   font-size: 10vw;
   text-align: center;
-  color: #26547c;
+  color: #fcfcfc;
 }
 
 .weather-search-box {
@@ -50,7 +49,7 @@ nav {
   text-align: center;
   font-size: 3em;
   margin: 0 auto;
-  color: #26547c;
+  color: #fcfcfc;
 }
 
 .weather-card {
@@ -97,9 +96,12 @@ li {
   color: #ef476f;
 }
 .fa {
-    color: #06d6a0;
+    color: #9BD1FA;
 }
 
+.weather-card:nth-child(1){
+
+}
 
 
 }
